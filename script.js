@@ -11,12 +11,12 @@ function resetButton(){
     document.querySelector('.rstBtn').style.display = 'none';
     if (playerScore == 5 || computerScore == 5){
         document.querySelector('.rstBtn').style.display = 'block';
-        document.querySelectorAll(".btn").forEach((e)=>{e.disabled = true});
+        document.querySelectorAll('.btn').forEach((e)=>{e.disabled = true});
         rstBtn.addEventListener('click',function(){
             playerScore = 0;
             computerScore = 0;
             document.getElementById('score').innerText = ''
-            document.querySelectorAll(".btn").forEach((e)=>{e.disabled = false});
+            document.querySelectorAll('.btn').forEach((e)=>{e.disabled = false});
             document.querySelector('.rstBtn').style.display = 'none';
         })
     } 
@@ -65,6 +65,6 @@ function playRound(playerChoice){
 
 buttons.forEach(btn => {
     btn.addEventListener('click', function(){
-    playRound(document.getElementById('btn').value);
+    playRound(btn.value);
 })
 });
