@@ -40,7 +40,7 @@ function playRound(playerChoice){
 
                 computerScore +=1;
                 score = ("\nYou lose! " + computerChoice + " beats " + playerChoice
-                + "\n\nPlayer score: " + playerScore + "\nComputer score: " + computerScore);
+                + "\n\nYour score: " + playerScore + "\nComputer score: " + computerScore);
 
                 if (computerScore == 5) {
                     score += "\n\nYou lost the game! Click the reset button to play again.\n\n";
@@ -50,7 +50,7 @@ function playRound(playerChoice){
     } else {
         playerScore +=1;
         score = ("\nYou win! " + playerChoice + " beats " + computerChoice
-        + "\n\nPlayer score: " + playerScore + "\n" + "Computer score: " + computerScore);
+        + "\n\nYour score: " + playerScore + "\n" + "Computer score: " + computerScore);
 
         if (playerScore == 5) {
             score += "\n\nYou won the game! Click the reset button to play again.\n\n";
