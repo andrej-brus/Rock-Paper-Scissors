@@ -67,4 +67,4 @@ buttons.forEach(btn => {
     btn.addEventListener('click', function(){
     playRound(btn.value);
 })
-});
+})
