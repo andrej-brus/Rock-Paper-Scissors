@@ -34,21 +34,20 @@ function playRound(playerChoice){
         + "\n\nYour score: " + playerScore + "\nComputer Score: " + computerScore);
         resetButton();
 
-    } else if ((computerChoice == 'paper' && playerChoice == 'rock') ||
-              (computerChoice == 'rock' && playerChoice == 'scissors') ||
-              (computerChoice == 'scissors' && playerChoice == 'paper')){
+    } else if ((computerChoice == 'paper' && playerChoice == 'rock') || 
+                (computerChoice == 'rock' && playerChoice == 'scissors') || 
+                (computerChoice == 'scissors' && playerChoice == 'paper')){
+        computerScore += 1;
+        score = ("\nYou lose! " + computerChoice + " beats " + playerChoice
+        + "\n\nYour score: " + playerScore + "\nComputer score: " + computerScore);
 
-                computerScore +=1;
-                score = ("\nYou lose! " + computerChoice + " beats " + playerChoice
-                + "\n\nYour score: " + playerScore + "\nComputer score: " + computerScore);
-
-                if (computerScore == 5) {
-                    score += "\n\nYou lost the game! Click the reset button to play again.\n\n";
-                    resetButton();
-                }
+        if (computerScore == 5) {
+            score += "\n\nYou lost the game! Click the reset button to play again.\n\n";
+            resetButton();
+        }
 
     } else {
-        playerScore +=1;
+        playerScore += 1;
         score = ("\nYou win! " + playerChoice + " beats " + computerChoice
         + "\n\nYour score: " + playerScore + "\n" + "Computer score: " + computerScore);
 
@@ -66,5 +65,5 @@ function playRound(playerChoice){
 buttons.forEach(btn => {
     btn.addEventListener('click', function(){
     playRound(btn.value);
-})
-})
+    })
+});
